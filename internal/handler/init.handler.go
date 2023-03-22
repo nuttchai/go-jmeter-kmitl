@@ -5,11 +5,6 @@ import (
 )
 
 func Init() {
-	initSampleHandler(&TSampleHandler{
-		SampleService: service.SampleService,
-		UserService:   service.UserService,
-	})
-
 	initUserHandler(&TUserHandler{
 		UserService: service.UserService,
 	})

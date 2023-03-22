@@ -29,7 +29,7 @@ services:
     ports:
       - 5432:5432
     networks:
-      - sample
+      - users
 
   api:
     container_name: api
@@ -45,7 +45,7 @@ services:
     links:
       - db
     networks:
-      - sample
+      - users
 
 networks:
-  sample:
+  users:
