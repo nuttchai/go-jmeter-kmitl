@@ -59,7 +59,7 @@ services:
   caddy:
     container_name: caddy
     # image: nuttchai/caddy:1.0.0 # use this image if you want to use caddy locally
-    image: nuttchai/caddy-production:1.0.0 # use this image if you want to use caddy in production
+    image: nuttchai/caddy-production:1.0.1 # use this image if you want to use caddy in production
     depends_on:
       - user
     ports:

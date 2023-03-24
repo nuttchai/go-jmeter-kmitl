@@ -21,7 +21,7 @@
 	}
 }
 
-user.nuttchai.app:80 {
+node.nuttchai.app:80 {
 	reverse_proxy  http://user:8000
 }
 
