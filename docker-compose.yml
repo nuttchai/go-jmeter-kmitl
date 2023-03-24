@@ -70,6 +70,8 @@ services:
     volumes:
       - ./external/proxy/caddy/caddy_data:/data
       - ./external/proxy/caddy/caddy_config:/config
+    networks:
+      - users
 
 volumes:
   caddy_data:
