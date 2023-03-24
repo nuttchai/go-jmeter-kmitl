@@ -31,8 +31,8 @@ services:
     networks:
       - users
 
-  user:
-    container_name: user
+  user_svc:
+    container_name: user_svc
     build:
       context: .
       dockerfile: Dockerfile
@@ -61,7 +61,8 @@ services:
     # image: nuttchai/caddy:1.0.0 # use this image if you want to use caddy locally
     image: nuttchai/caddy-production:1.0.4 # use this image if you want to use caddy in production
     depends_on:
-      - user
+      - user_svc
+      - db
     ports:
       - 80:80
       - 443:443

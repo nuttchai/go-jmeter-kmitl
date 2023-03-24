@@ -26,6 +26,6 @@ user.nuttchai.app {
     import static
     import security
 
-	reverse_proxy /api/* http://user:8000
+	reverse_proxy /* user_svc:8000
 }
 
