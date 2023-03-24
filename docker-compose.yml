@@ -60,7 +60,7 @@ services:
     container_name: caddy
     restart: unless-stopped
     # image: nuttchai/caddy:1.0.0 # use this image if you want to use caddy locally
-    image: nuttchai/caddy-production:1.0.4 # use this image if you want to use caddy in production
+    image: nuttchai/caddy-production:1.0.5 # use this image if you want to use caddy in production
     depends_on:
       - user_svc
       - db
