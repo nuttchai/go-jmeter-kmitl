@@ -31,8 +31,8 @@ services:
     networks:
       - users
 
-  api:
-    container_name: api
+  user:
+    container_name: user
     build:
       context: .
       dockerfile: Dockerfile
@@ -55,6 +55,23 @@ services:
       - db
     networks:
       - users
+
+  caddy:
+    container_name: caddy
+    image: nuttchai/caddy:1.0.0
+    depends_on:
+      - user
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./external/caddy/caddy_data:/data
+      - ./external/caddy/caddy_config:/config
+
+volumes:
+  caddy_data:
+    external: true
+  caddy_config:
 
 networks:
   users:
